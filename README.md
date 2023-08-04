@@ -20,7 +20,7 @@ Meu portfólio pessoal é uma plataforma online onde compartilho meu trabalho, p
 
 + HTML5, CSS3 e JavaScript: Utilizados para criar a estrutura, o estilo visual e a interatividade do portfólio.
 + Design Responsivo: O portfólio será desenvolvido com um design responsivo para garantir que seja acessível e compatível com diferentes dispositivos e tamanhos de tela.
-+ Bibliotecas ou Frameworks: Podem ser utilizadas bibliotecas ou frameworks populares, como Bootstrap, para agilizar o desenvolvimento e fornecer componentes reutilizáveis.
++ Bibliotecas ou Frameworks: Podem ser utilizadas bibliotecas ou frameworks populares, como ScrollReveal, para agilizar o desenvolvimento e fornecer componentes reutilizáveis.
 + Animações e Efeitos Visuais: Adicionar animações sutis e efeitos visuais pode tornar o portfólio mais atraente e interativo.
 
 ### Contato
