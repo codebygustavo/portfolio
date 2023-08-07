@@ -170,10 +170,12 @@ ul li a:hover::after {
   position: fixed;
   top: 0;
   width: 100vw;
+  max-width: 1600px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--thirdColor-);
   z-index: 10;
+  border-bottom: 1px solid var(--shadow-);
 }
 #emailButton, .projectOptions button{
     transition: background 500ms;
@@ -331,7 +333,7 @@ ul li a:hover::after {
   flex-wrap: wrap;
   width: max-content;
   margin: 2rem auto;
-  max-width: 605px;
+  max-width: 615px;
   width: 100%;
 }
 .projectFilter li{
