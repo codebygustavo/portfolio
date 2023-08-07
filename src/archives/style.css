@@ -113,6 +113,9 @@ body {
 .textContent {
   color: var(--secondColor-);
 }
+.logo a{
+  color: var(--firstColor-);
+}
 .logo,
 header ul li a,
 header .button .ri-github-fill,
