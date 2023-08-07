@@ -1,0 +1,624 @@
+:root {
+  --firstColor-: #343434;
+  --secondColor-: #000;
+  --thirdColor-: #fefefe;
+  --fourthColor-: #ebf8ff;
+  --fifthColor-: #daf3ff;
+  --fifthSubColor-: #a2e0ff;
+  --sixthColor-: #ffebf6;
+  --sixthSubColor-: #fec5e3;
+  --seventhColor-: #fff5d2;
+  --seventhSubColor-: #ffe661;
+  --eighthColor-: #f3eeff;
+  --eighthSubColor-: #ae8bff;
+  --tenthColor-: #ff9d9d;
+  --tenthSubColor-: #ff6767;
+  --eleventhColor-: #fff7d2;
+  --eleventhSubColor-: #ffd748;
+  --twelfthColor-: #fbd5f3;
+  --twelfthSubColor-: #fdaedf;
+  --shadow-: #9191911f;
+}
+.black {
+  --firstColor-: #a7a6a6;
+  --secondColor-: #eee;
+  --thirdColor-: #2b2b2b;
+  --fourthColor-: #363636;
+  --fifthColor-: #313131;
+  --sixthColor-: #313131;
+  --seventhColor-: #313131;
+  --eighthColor-: #313131;
+  --tenthColor-: #313131;
+  --eleventhColor-: #313131;
+  --twelfthColor-: #313131;
+  --shadow-: #1d1d1d60;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+*,
+html,
+body {
+  scroll-behavior: smooth;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+}
+body {
+  background: var(--thirdColor-);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+#homePage,
+#HabilitysPage,
+#skillsPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#HabilitysPage .cardContainer,
+#projectsPage .cardContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 950px;
+  position: relative;
+  gap: 1rem;
+}
+#HabilitysPage .cardContainer,
+#skillsPage .cardContainer,
+#projectsPage .cardContent {
+  margin: 6rem auto;
+}
+#HabilitysPage .cardContainer::after,
+#skillsPage .cardContainer::after {
+  content: "";
+  background: var(--fourthColor-);
+  position: absolute;
+  left: 3%;
+  top: -5%;
+  border-radius: 20px;
+  width: 95%;
+  height: 110%;
+  z-index: -1;
+  opacity: 0.6;
+}
+#HabilitysPage h2,
+#skillsPage h2,
+#projectsPage h2 {
+  color: var(--secondColor-);
+  font-size: 2.4em;
+  text-align: center;
+}
+#homePage p,
+#HabilitysPage h2 ~ p,
+#skillsPage h2 ~ p,
+#projectsPage h2 ~ p {
+  color: var(--firstColor-);
+  font-size: 1em;
+  padding: 0 0.65rem;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+.cardContainer .card,
+.textContent {
+  color: var(--secondColor-);
+}
+.logo,
+header ul li a,
+header .button .ri-github-fill,
+footer .childContent h3,
+footer .childContent p,
+footer .links a,
+.footer .lastChild,
+.footer .childContent ul li a {
+  color: var(--firstColor-);
+}
+header .child {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+header .buttons div button,
+header .buttons div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+header .buttons div button span {
+  display: none;
+}
+header ul {
+  display: flex;
+  gap: 2rem;
+}
+ul li a {
+  color: var(--firstColor-);
+  position: relative;
+}
+ul li a::after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border: 1px solid var(--firstColor-);
+  transition: 500ms;
+}
+ul li a:hover::after {
+  width: 20%;
+  opacity: 1;
+}
+.changeColor {
+  font-size: 1.5em;
+  background: transparent;
+  border: none;
+  color: var(--firstColor-);
+}
+.headerShow{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--thirdColor-);
+  z-index: 10;
+}
+#emailButton, .projectOptions button{
+    transition: background 500ms;
+    border: none;
+}
+#emailButton:hover, .projectOptions button:hover{
+    background: var(--firstColor-);
+}
+#menuButton {
+  padding: 1rem;
+  font-size: 1.5em;
+  background: var(--firstColor-);
+  color: var(--thirdColor-);
+  border-radius: 50%;
+  display: none;
+}
+.githubButton .label {
+  color: var(--firstColor-);
+}
+#homePage {
+  width: 100%;
+  height: calc(100vh - 90px);
+  text-align: center;
+  justify-content: space-around;
+}
+#homePage h1 {
+  font-size: 5em;
+  color: var(--secondColor-);
+}
+#homePage h2 {
+  font-size: 1.2em;
+  color: var(--firstColor-);
+}
+#homePage span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+  color: var(--secondColor-);
+}
+#homePage span i {
+  padding: 0.8rem;
+  color: var(--thirdColor-);
+  border-radius: 50%;
+  background-color: var(--firstColor-);
+  animation: indication 1500ms linear infinite;
+}
+#emailButton {
+  padding: 0.8rem 1.8rem;
+  color: var(--thirdColor-);
+  background: var(--secondColor-);
+  border: none;
+  margin: 3rem auto 0;
+  font-weight: 800;
+  cursor: pointer;
+}
+#HabilitysPage .cardContainer .card {
+  flex-direction: row;
+}
+#HabilitysPage .cardContainer .card {
+  display: flex;
+  background: var(--thirdColor-);
+  box-shadow: 1px 1px 6px var(--shadow-);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 450px;
+  gap: 1.5rem;
+}
+#HabilitysPage .cardContainer .card h2 {
+  font-size: 2em;
+  margin-bottom: 2rem;
+}
+.cardContainer .card .leftImg {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.cardContainer .card .leftImg i {
+  padding: 1rem;
+  font-size: 2em;
+  border-radius: 10px;
+}
+.cardContainer .card .firstLeftImg i {
+  background: var(--fifthColor-);
+  color: var(--fifthSubColor-);
+}
+.cardContainer .card .SecondLeftImg i {
+  background: var(--sixthColor-);
+  color: var(--sixthSubColor-);
+}
+.cardContainer .card .thirdLeftImg i {
+  background: var(--seventhColor-);
+  color: var(--seventhSubColor-);
+}
+.cardContainer .card .fourthLeftImg i {
+  background: var(--eighthColor-);
+  color: var(--eighthSubColor-);
+}
+#skillsPage .cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skillsPage .cardContainer .card {
+  background: var(--thirdColor-);
+  border: 1px solid #9c9c9c13;
+  padding: 2rem;
+  width: 315px;
+  height: 400px;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+#skillsPage .cardContainer .firstCard {
+  border-radius: 20px 0 0 20px;
+  border-right: none;
+}
+#skillsPage .cardContainer .thirdCard {
+  border-radius: 0 20px 20px 0;
+  border-left: none;
+}
+#skillsPage .cardContainer .firstCard i {
+  background: var(--tenthColor-);
+  color: var(--tenthSubColor-);
+}
+#skillsPage .cardContainer .secondCard i {
+  background: var(--eleventhColor-);
+  color: var(--eleventhSubColor-);
+}
+#skillsPage .cardContainer .thirdCard i {
+  background: var(--twelfthColor-);
+  color: var(--twelfthSubColor-);
+}
+#skillsPage .cardTop {
+  display: flex;
+  gap: 1rem;
+}
+#skillsPage .cardTop i {
+  padding: 1rem;
+  font-size: 2em;
+  border-radius: 10px;
+  width: 64px;
+  height: 64px;
+}
+#skillsPage .cardBotton {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.projectFilter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 3px 0px var(--shadow-);
+  flex-wrap: wrap;
+  width: max-content;
+  margin: 2rem auto;
+  max-width: 600px;
+  width: 100%;
+}
+.projectFilter li{
+  margin: 10px;
+  padding: 5px 20px;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  cursor: pointer;
+  user-select: none;
+  color: var(--secondColor-);
+}
+.projectFilterActive{
+  background: var(--fifthColor-);
+  transition: background 500ms linear;
+}
+#projectsPage .cardContent{
+  margin-top: 0;
+}
+#projectsPage .cardContent .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--thirdColor-);
+  box-shadow: 1px 1px 6px var(--shadow-);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 480px;
+  height: 580px;
+}
+#projectsPage .figureContent {
+  background: var(--fifthColor-);
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 260px;
+  border-radius: 10px;
+  position: relative;
+}
+#projectsPage .figureContent img {
+  max-width: 332px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#projectsPage .textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+#projectsPage .projectButton {
+  color: var(--firstColor-);
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+#projectsPage .projectButton i {
+  opacity: 0;
+  position: relative;
+  left: -10px;
+  transition: 200ms linear;
+}
+#projectsPage .projectButton:hover i {
+  opacity: 1;
+  left: 0;
+}
+#projectsPage .anchorCard {
+  display: flex;
+  gap: 1rem;
+}
+.projectOptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.projectOptions a,
+.projectOptions p{
+    color: var(--firstColor-);
+}
+.projectOptions button a{
+  color: var(--thirdColor-);
+}
+footer {
+  padding: 1rem 2rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .child {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+footer hr {
+  border-color: var(--secondColor-);
+  margin: 1.8rem auto;
+  min-width: 200px;
+  max-width: 600px;
+  width: 100%;
+}
+footer .childContent h3 {
+  color: var(--secondColor-);
+}
+footer .childContent p {
+  color: var(--firstColor-);
+  max-width: 400px;
+}
+footer .logoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .links a {
+  color: var(--firstColor-);
+  font-size: 1.8em;
+}
+footer .lastChild {
+  color: var(--firstColor-);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  font-size: 0.8em;
+}
+.returnToTop {
+  display: none;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+}
+.returnToTop i {
+  padding: 1rem;
+  background: var(--firstColor-);
+  color: var(--thirdColor-);
+  font-size: 1.5em;
+  border-radius: 15px;
+  transition: 100ms linear;
+}
+.showReturnToTop {
+  display: block;
+  transition: 500ms linear;
+}
+@media screen and (max-width: 1024px) {
+  #HabilitysPage .cardContainer {
+    gap: 1rem;
+  }
+  #projectsPage .cardContent {
+    max-width: 920px;
+    gap: 1rem;
+  }
+  #skillsPage .cardContainer .card {
+    max-width: 305px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 964px) {
+  #HabilitysPage,
+  #skillsPage,
+  #projectsPage {
+    margin: 0 2rem;
+  }
+  #skillsPage .cardContainer {
+    flex-direction: column;
+  }
+  #skillsPage .cardContainer .card {
+    max-width: none;
+    width: 90vw;
+  }
+  #skillsPage .cardContainer .firstCard {
+    border-radius: 20px 20px 0 0;
+    border-right: 1px solid #9c9c9c13;
+  }
+  #skillsPage .cardContainer .thirdCard {
+    border-radius: 0 0 20px 20px;
+    border-left: 1px solid #9c9c9c13;
+  }
+  #projectsPage .cardContent {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  #projectsPage .cardContent .card {
+    max-width: none;
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 820px) {
+  header nav {
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    padding: 2rem;
+    box-shadow: 1px 1px 6px var(--shadow-);
+    z-index: 10;
+    background: var(--thirdColor-);
+  }
+  header .active {
+    display: flex;
+  }
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+  }
+  header nav a {
+    width: 100%;
+    padding: 1rem 1rem 0 0;
+    font-size: 1.2em;
+  }
+  #menuButton {
+    display: flex;
+  }
+  .githubButton,
+  .header .button {
+    display: none;
+  }
+  #HabilitysPage .cardContainer .card {
+    flex-direction: column;
+  }
+  .cardContainer .card .leftImg {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 724px) {
+  #homePage h1 {
+    font-size: 3.5em;
+  }
+  #homePage h1 ~ h2 {
+    max-width: 300px;
+    padding: 0 0.8rem;
+    margin: 0 auto;
+  }
+  #HabilitysPage .cardContainer{
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  #HabilitysPage .cardContainer::after,
+  #skillsPage .cardContainer::after {
+    display: none;
+  }
+  #HabilitysPage .cardContainer .card {
+    max-width: none;
+    width: 90vw;
+  }
+  #HabilitysPage,
+  #skillsPage,
+  #projectsPage {
+    padding: 0;
+    margin: 0.8rem auto;
+  }
+  footer .child {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 424px) {
+  header {
+    padding: 1rem 1.8rem;
+  }
+  header .child {
+    gap: 0.8rem;
+  }
+  #menuButton {
+    font-size: 1rem;
+  }
+  .projectOptions{
+    flex-direction: column;
+}
+}
+@media screen and (max-width: 280px) {
+  #projectsPage .cardContent .card {
+    height: 650px;
+  }
+  #projectsPage .cardContent .figureContent {
+    height: 160px;
+    min-height: 160px;
+  }
+}
