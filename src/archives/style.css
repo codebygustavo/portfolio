@@ -183,6 +183,7 @@ ul li a:hover::after {
 .activeNavItem{
   color: var(--secondColor--);
   font-weight: 800;
+  transition: 500ms;
 }
 #emailButton, .projectOptions button{
     transition: background 500ms;
