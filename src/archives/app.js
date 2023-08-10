@@ -9,7 +9,7 @@ document.getElementById("menuButton").addEventListener("click", toggleMenu);
 const backToTopButton = document.querySelector(".returnToTop");
 const header = document.querySelector(".header");
 const scrollDown = () => {
-  if (window.scrollY >= 1000) {
+  if (window.scrollY >= 600) {
     backToTopButton.classList.add("showReturnToTop");
     header.classList.add("headerShow")
   } else {
@@ -75,3 +75,24 @@ $(document).ready(function () {
     }
   })
 })
+
+$(document).ready(function(){
+  $('nav a').click(function(){
+    $('nav a').removeClass('activeNavItem');
+    $(this).addClass('activeNavItem')
+  });
+
+  $(window).scroll(function(){
+    var scrollPosition = $(window).scrollTop();
+
+    $('section').each(function () {
+      var sectionId = $(this).attr('id');
+      var sectiontop = $(this).offset().top -50;
+
+      if(scrollPosition >= sectiontop) {
+        $('nav a').removeClass('activeNavItem')
+        $('nav a[href="#' + sectionId + '"]').addClass('activeNavItem')
+      }
+    });
+  });
+});
