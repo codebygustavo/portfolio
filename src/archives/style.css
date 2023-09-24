@@ -181,8 +181,7 @@ ul li a:hover::after {
   border-bottom: 1px solid var(--shadow-);
 }
 .activeNavItem{
-  color: var(--secondColor--);
-  font-weight: 800;
+  font-weight: 900;
   transition: 500ms;
 }
 #emailButton, .projectOptions button{

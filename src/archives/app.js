@@ -81,18 +81,4 @@ $(document).ready(function(){
     $('nav a').removeClass('activeNavItem');
     $(this).addClass('activeNavItem')
   });
-
-  $(window).scroll(function(){
-    var scrollPosition = $(window).scrollTop();
-
-    $('section').each(function () {
-      var sectionId = $(this).attr('id');
-      var sectiontop = $(this).offset().top -50;
-
-      if(scrollPosition >= sectiontop) {
-        $('nav a').removeClass('activeNavItem')
-        $('nav a[href="#' + sectionId + '"]').addClass('activeNavItem')
-      }
-    });
-  });
 });
