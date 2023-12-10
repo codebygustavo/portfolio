@@ -1,0 +1,527 @@
+* {
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    transition: background-color 250ms
+}
+
+:root {
+    --color1: #ede7de;
+    --color1-1: #d4cec23f;
+    --color2: #4c6763;
+    --color3: #364442;
+    --color4: #a3dcd4;
+    --color5: #bdb8ad;
+    --color6: #ffffff80;
+    --fff: #fff
+}
+
+.dark {
+    --color1: #233831;
+    --color1-1: #1e2e293f;
+    --color2: #41a384;
+    --color3: #edeade;
+    --color4: #606d80;
+    --color5: #8f9499;
+    --color6: #8fdcc21a
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    scroll-behavior: smooth;
+    background-color: var(--color1)
+}
+
+main {
+    padding: 0 1.6em
+}
+
+.capacities .card,
+.wrap .card {
+    background-color: var(--color6);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    overflow: hidden;
+    padding: 1em;
+    position: relative
+}
+
+.capacities .card div span,
+.wrap .wrap div span {
+    color: var(--color5)
+}
+
+.capacities .card div h3,
+.wrap .card div h3 {
+    color: var(--color2)
+}
+
+.capacities .card div figure img,
+.wrap .card div figure img {
+    display: block;
+    position: absolute
+}
+
+.cookies {
+    animation: cookies 8s ease-in-out;
+    animation-delay: 2s;
+    background-color: var(--color1);
+    bottom: 20px;
+    box-shadow: 0 0 10px 10px var(--color1-1);
+    height: auto;
+    left: 20px;
+    opacity: 0;
+    padding: 1em;
+    position: fixed;
+    width: 450px
+}
+
+.cookies h2 {
+    color: var(--color2);
+    font-weight: 700;
+    margin-bottom: .5em
+}
+
+.cookies p {
+    color: var(--color3);
+    width: 100%
+}
+
+.cookies div {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin-top: 2em
+}
+
+.cookies .acept {
+    background-color: var(--color3);
+    color: var(--color1);
+    font-weight: 700
+}
+
+.cookies .disable {
+    background-color: transparent;
+    border: 1px solid var(--color3);
+    color: var(--color3)
+}
+
+@keyframes cookies {
+    0% {
+        opacity: 0
+    }
+
+    10% {
+        opacity: 1
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@media screen and (max-width:992px) {
+    .cookies {
+        min-width: 350px;
+        width: 50vw
+    }
+}
+
+@media screen and (max-width:576px) {
+    .cookies {
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        min-width: 250px;
+        width: 100%
+    }
+}
+
+#header {
+    background-color: var(--color1);
+    width: 100%;
+    z-index: 12;
+    top: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-shadow: -1px 18px 18px -10px var(--color1-1)
+}
+
+#header nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    width: 100%
+}
+
+#header nav div,
+#header nav div figure a,
+#header nav div ul,
+#header nav div ul figure {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+#header nav div figure a,
+#header nav div ul {
+    gap: 1.6em
+}
+
+#header figure img {
+    height: 42px;
+    width: 42px;
+    z-index: 2
+}
+
+#header .logo {
+    position: relative;
+    z-index: 12
+}
+
+#header .logo::after {
+    background-color: var(--color2);
+    border-radius: 50%;
+    content: " ";
+    height: 54px;
+    inset: 0;
+    left: -5.5px;
+    position: absolute;
+    top: -10px;
+    width: 54px
+}
+
+#header nav div ul li a {
+    color: var(--color2)
+}
+
+#header nav div ul .toggleTheme {
+    background-color: var(--color2);
+    border-radius: 50%;
+    color: var(--fff);
+    font-size: 18px;
+    padding: 1em 1.2em
+}
+
+#header nav div .menu {
+    background-color: var(--color1)
+}
+
+#header nav div ul.aditional {
+    gap: 2em
+}
+
+.nav-but {
+    display: none
+}
+
+@media screen and (max-width:576px) {
+    .menu {
+        display: none !important;
+        z-index: 10
+    }
+
+    .menu-show {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        justify-content: baseline;
+        align-items: center;
+        top: 85px;
+        inset: 0;
+        z-index: 10
+    }
+
+    .menu-show li a {
+        font-size: 6vw
+    }
+
+    .menu-icon-x {
+        position: absolute;
+        right: 20px;
+        top: 12px
+    }
+
+    .menu-icon-x i {
+        color: var(--color2);
+        font-size: 58px
+    }
+
+    .nav-but {
+        display: block;
+        margin-bottom: .2em
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: .2em
+    }
+
+    .menu-icon span {
+        content: " ";
+        width: 20px;
+        height: 2px;
+        background-color: var(--color3)
+    }
+
+    .click-target .line-left {
+        transform: rotate(45deg) translateY(6px) translateX(7px)
+    }
+
+    .click-target .line-center {
+        opacity: 0
+    }
+
+    .click-target .line-right {
+        transform: rotate(-45deg) translateY(-1px) translateX(1px)
+    }
+}
+
+#hero {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+    min-height: 50vh;
+    text-align: center
+}
+
+#hero>div div {
+    margin-bottom: 3em
+}
+
+#hero div h1,
+#hero div h2 {
+    color: var(--color2);
+    font-size: 89px;
+    line-height: 100%
+}
+
+#hero div p {
+    color: var(--color3)
+}
+
+@media screen and (max-width:992px) {
+
+    #hero div h1,
+    #hero div h2 {
+        font-size: 8vw
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    #hero div h1,
+    #hero div h2 {
+        font-size: 8.8vw
+    }
+}
+
+#habilities {
+    margin: 2em 0
+}
+
+.capacities {
+    display: flex;
+    flex-direction: column;
+    gap: 2em
+}
+
+.capacities .grid {
+    display: grid;
+    gap: 0 0;
+    gap: 2em;
+    grid-template-areas: ". ." ".";
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr
+}
+
+.capacities .card {
+    height: 420px
+}
+
+@media screen and (max-width:992px) {
+    .capacities .grid {
+        display: flex;
+        flex-direction: column
+    }
+}
+
+#repository {
+    margin: 2em 0
+}
+
+#repository .finished div h2,
+#repository .working div h2 {
+    color: var(--color2);
+    font-size: 89px;
+    margin: 1em 0;
+    text-align: center
+}
+
+#repository .wrap {
+    display: flex;
+    gap: 2em;
+    flex-direction: column
+}
+
+#repository .wrap a {
+    color: var(--color5)
+}
+
+#repository .no-more {
+    text-align: center;
+    font-size: 28px;
+    color: var(--color2);
+    width: 100%;
+}
+
+#repository .wrap-flex {
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+#repository .wrap-flex a {
+    width: calc(50% - 1em)
+}
+
+#repository .wrap-flex .card {
+    height: 400px
+}
+
+@media screen and (max-width:992px) {
+
+    #repository .finished div h2,
+    #repository .working div h2 {
+        font-size: 8vw
+    }
+
+    #repository .wrap-flex {
+        flex-direction: column
+    }
+
+    #repository .wrap-flex a {
+        width: 100%
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    #repository .finished div h2,
+    #repository .working div h2 {
+        font-size: 8.8vw
+    }
+}
+
+#footer {
+    align-items: flex-start;
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 2em 1.6em;
+    width: 100%
+}
+
+#footer>div {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%
+}
+
+#footer div .copyrigth {
+    padding-left: 1em;
+    color: var(--color2);
+    font-weight: 600
+}
+
+#footer .github a {
+    align-items: center;
+    background-color: var(--color6);
+    border-radius: 60px;
+    display: flex;
+    gap: 2em;
+    justify-content: flex-start;
+    padding: 1em 1.6em;
+    width: 100%
+}
+
+#footer .github a figure i {
+    color: var(--color2);
+    font-size: 48px
+}
+
+#footer .github a span {
+    color: var(--color2);
+    font-size: 18px
+}
+
+#footer .github a p {
+    color: var(--color3);
+    font-size: 22px;
+    font-weight: 600
+}
+
+#footer .archor {
+    flex-direction: row;
+    gap: 4em
+}
+
+#footer .archor div span {
+    color: var(--color2);
+    font-size: 22px
+}
+
+#footer .archor div ul {
+    margin: 1.6em auto
+}
+
+#footer .archor div ul li {
+    font-size: 18px;
+    padding: .4em 0
+}
+
+#footer .archor div ul li a {
+    color: var(--color3)
+}
+
+@media screen and (max-width:992px) {
+    #footer {
+        flex-direction: column
+    }
+}
+
+@media screen and (max-width:576px) {
+    #footer .github a {
+        gap: .6em
+    }
+
+    #footer .github a figure i {
+        font-size: 38px
+    }
+
+    #footer .github a span {
+        font-size: 16px
+    }
+
+    #footer .github a p {
+        font-size: 18px
+    }
+
+    #footer .archor {
+        flex-direction: column
+    }
+}
