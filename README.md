@@ -24,4 +24,4 @@ Meu portfólio pessoal é uma plataforma online onde compartilho meu trabalho, p
 + Animações e Efeitos Visuais: Adicionar animações sutis e efeitos visuais pode tornar o portfólio mais atraente e interativo.
 
 ### Contato
-Caso precise entrar em contato comigo, você pode utilizar os seguintes E-mail: hbw3.gustavo@gmail.com
+Caso precise entrar em contato comigo, você pode utilizar os seguintes E-mail: submit.gustavo@yahoo.com
