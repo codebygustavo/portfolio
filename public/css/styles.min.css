@@ -62,6 +62,13 @@ main {
     color: var(--color2)
 }
 
+.capacities .card div p {
+    color: var(--color3);
+    font-size: 14px;
+    margin-top: 0.6em;
+    max-width: 650px;
+}
+
 .capacities .card div figure img,
 .wrap .card div figure img {
     display: block;
@@ -154,7 +161,6 @@ main {
     top: 0;
     margin: 0 auto;
     max-width: 1200px;
-    box-shadow: -1px 18px 18px -10px var(--color1-1)
 }
 
 #header nav {
@@ -180,8 +186,8 @@ main {
 }
 
 #header figure img {
-    height: 42px;
-    width: 42px;
+    height: 34px;
+    width: 34px;
     z-index: 2
 }
 
@@ -194,12 +200,12 @@ main {
     background-color: var(--color2);
     border-radius: 50%;
     content: " ";
-    height: 54px;
+    height: 44px;
     inset: 0;
-    left: -5.5px;
+    left: -5px;
     position: absolute;
-    top: -10px;
-    width: 54px
+    top: -8px;
+    width: 44px
 }
 
 #header nav div ul li a {
@@ -211,7 +217,11 @@ main {
     border-radius: 50%;
     color: var(--fff);
     font-size: 18px;
-    padding: 1em 1.2em
+    padding: 0.6em 0.8em
+}
+
+#header nav div ul .toggleTheme i {
+    font-size: 16px;
 }
 
 #header nav div .menu {
@@ -423,6 +433,7 @@ main {
     #repository .working div h2 {
         font-size: 8.8vw
     }
+
 }
 
 #footer {
