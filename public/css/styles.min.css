@@ -359,7 +359,7 @@ main {
 }
 
 .capacities .card {
-    height: 420px
+    height: 460px
 }
 
 @media screen and (max-width:992px) {
@@ -367,6 +367,14 @@ main {
         display: flex;
         flex-direction: column
     }
+}
+
+@media screen and (max-width:576px) {
+
+    .capacities .card {
+        height: 600px
+    }
+
 }
 
 #repository {
