@@ -78,7 +78,7 @@ main {
 .capacities .card div figure img,
 .wrap .card div figure img {
     display: block;
-    position: absolute
+    position: absolute;
 }
 
 .cookies {
@@ -423,6 +423,10 @@ main {
 
 #repository .wrap-flex .card {
     height: 400px
+}
+
+#repository .wrap-flex .card img {
+    width: 120%;
 }
 
 @media screen and (max-width:992px) {
